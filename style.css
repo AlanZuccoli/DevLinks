@@ -83,15 +83,16 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  animation: slide-out 0.5s;
+  cursor: pointer;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
-  -webkit-transition: 0.3s;
-  transition: 0.3s
+  animation: slide-in 0.5s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #links ul {
@@ -172,5 +173,24 @@ footer a {
 
   .light {
     --background: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
