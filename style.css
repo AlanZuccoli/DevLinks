@@ -29,6 +29,7 @@ body {
   margin: auto 0;
   color: var(--text-color);
   font-family: "inter", "sans-serif";
+  height: 100vh;
 }
 
 #container {
@@ -162,4 +163,14 @@ footer {
 
 footer a {
   color: var(--text-color);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --background: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --background: url(./assets/bg-desktop-light.jpg);
+  }
 }
